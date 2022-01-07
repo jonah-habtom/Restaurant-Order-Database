@@ -1,0 +1,22 @@
+{
+  "name": "a4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "database-initializer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server -e js,mjs,json,pug,html,css"
+  },
+  "author": "Jonah Habtom",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongodb-session": "^3.1.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongodb": "^4.2.1",
+    "mongoose": "^6.0.14",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2"
+  }
+}

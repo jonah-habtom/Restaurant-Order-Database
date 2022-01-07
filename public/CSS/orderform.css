@@ -1,0 +1,41 @@
+.column {
+    float: left;
+}
+
+.left{
+    width: 10%;
+}
+
+.right {
+    width: 25%;
+}
+
+.middle {
+    width: 65%;
+}
+
+#head {
+    background-color: black;
+    text-align: center;
+    padding: 0.5%;
+}
+
+body {
+    background-color:cornflowerblue;
+}
+
+#head a {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 5%;
+}
+
+#restaurant-select {
+    margin-top: 20px;
+}
+
+#info {
+    font-weight: bold;
+    font-size: 18px;
+}

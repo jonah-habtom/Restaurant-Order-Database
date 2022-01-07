@@ -1,0 +1,32 @@
+html 
+    head 
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/CSS/orderform.css")
+        link(rel="icon" href="/images/favicon.png")
+        title Order Form
+
+    body(onload="init()")
+        div#head
+            a(href="/") Home
+            a(href="/users") Users
+            if (session.loggedin)
+                a(href="/orderform") Order Form 
+                a(href="/users/" + session.userId) Profile
+                a(href="/logout") Logout
+            else 
+                a(href="/login") Login
+                a(href="/register") Register
+
+        select#restaurant-select
+        br
+        br
+        div#info
+        div#main
+            div#left.column.left
+            div#middle.column.middle
+            div#right.column.right
+    script(type="text/javascript" src="/orderform.js")
+
+            
+
