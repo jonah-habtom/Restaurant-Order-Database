@@ -16,3 +16,4 @@ Notable Design Decisions:
 -Created a new collection inside the database called orders. This will hold all the orders made by users. Each order will have a mongo generated id, a username corresponding to the user who made the order, the name of the restaurant ordered from, an object of items and the quantities ordered, and the subtotal, tax, delivery fee, and total for the order.
 -Created two schemas, a User schema and a Order schema. These made it easier to search the database for users and orders and also made it easier to add separate users when a new user registers and add a new order when a user makes one.
 -Created a new client file to handle sending requests for registering a new user, logging in a user, and updating the user's privacy setting. All redirects are done in the client when a repsonse is received, other than the redirect when the user logouts out, which is done server side.
+"# Restaurant_Order_Database" 
