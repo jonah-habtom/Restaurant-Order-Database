@@ -1,0 +1,45 @@
+html(lang="en")
+    head 
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="icon" href="/images/favicon.png")
+        link(rel="stylesheet", href="/CSS/profile.css")
+        script(type="text/javascript" src="/client.js")
+        title User Profile for #{user.username}
+
+    body
+        div#head
+            a(href="/") Home
+            a(href="/users") Users
+            if (session.loggedin)
+                a(href="/orderform") Order Form 
+                a(href="/users/" + session.userId) Profile
+                a(href="/logout") Logout
+            else 
+                a(href="/login") Login
+                a(href="/register") Register
+        
+        h1 Profile for #{user.username}
+        if (session.username == user.username)
+            if (user.privacy == true)
+                input(type="radio" name="privacy" id="on" checked=true)
+                label(for="on") On
+                br
+                input(type="radio" name="privacy" id="off" checked=false)
+                label(for="off") Off
+                br
+            else 
+                input(type="radio" name="privacy" id="on" checked=false)
+                label(for="on") On
+                br
+                input(type="radio" name="privacy" id="off" checked=true)
+                label(for="off") Off
+                br
+            button(type="submit" onclick="sendUpdatePrivacyReq("+ session._id+")") Save
+        
+        h2 Order History: 
+        div#orderHistory
+            each order in orders 
+                a(href="/orders/" + order._id) #{order.id}
+                br
+                br
