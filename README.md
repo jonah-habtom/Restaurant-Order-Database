@@ -1,19 +1,22 @@
-COMP 2406 Assignment 4
-Program Author: Jonah Habtom
+# Restaurant Ordering System
+This project simulates a restaurant ordering website, containing three different restaurants to select from, each with different menu options. 
 
-Favicon Source: https://www.pngall.com/restaurant-png/download/65831
+User profiles and order information is saved in a database, along with session data so users can log in, place orders, and view their own orders. Users are also able to view other users profiles, including their order history, if their privacy setting is set to public. Once logged in, users have access to the order form page to browse the different restaurant menus and place an order.
 
-How to Run Sever: 
--Navigate to the assignment4 directory
--Create a folder/directory named a4
--Start the mongo daemon with mongod --dbpath=a4
--In the terminal, type npm install to install the required dependencies for the server
--In the terminal, run the database initializer by typing node database-initializer.js
--To start the server, type node server.js
--In a web browser, type in http://localhost:3000/ to access the home page
+## Languages, Frameworks and Libraries Used
+- Javascript
+- CSS
+- Pug
+- MongoDB
+- Mongoose
+- Node.js
 
-Notable Design Decisions:
--Created a new collection inside the database called orders. This will hold all the orders made by users. Each order will have a mongo generated id, a username corresponding to the user who made the order, the name of the restaurant ordered from, an object of items and the quantities ordered, and the subtotal, tax, delivery fee, and total for the order.
--Created two schemas, a User schema and a Order schema. These made it easier to search the database for users and orders and also made it easier to add separate users when a new user registers and add a new order when a user makes one.
--Created a new client file to handle sending requests for registering a new user, logging in a user, and updating the user's privacy setting. All redirects are done in the client when a repsonse is received, other than the redirect when the user logouts out, which is done server side.
-"# Restaurant_Order_Database" 
+## Prerequisites
+- MongoDB
+- Node.js
+
+## Running the Database and Sever 
+1. With MongoDB installed, start the mongo daemon with mongod --dbpath=a4
+2. Install the required dependencies for running the server using the node package manager (npm install)
+3. Initialize the database by running the database initializer file (node database-initializer.js)
+4. Start the server (node server.js). The server will run at http://localhost:3000/
