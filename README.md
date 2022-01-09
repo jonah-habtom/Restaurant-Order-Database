@@ -10,12 +10,13 @@ User profiles and order information is saved in a database, along with session d
 - MongoDB
 - Mongoose
 - Node.js
+- Express
 
 ## Prerequisites
 - MongoDB
 - Node.js
 
-## Running the Database and Sever 
+## Running the Database and Server 
 1. With MongoDB installed, start the mongo daemon with mongod --dbpath=a4
 2. Install the required dependencies for running the server using the node package manager (npm install)
 3. Initialize the database by running the database initializer file (node database-initializer.js)
